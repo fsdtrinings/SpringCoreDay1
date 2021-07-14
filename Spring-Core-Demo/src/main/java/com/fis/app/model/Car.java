@@ -6,6 +6,8 @@ public class Car implements Serializable,Comparable<Car> {
 
 	private int carNumber;
 	private String carName;
+	private Engine e;
+	private MusicSystem ms;
 	
 	public Car() {
 		super();
@@ -15,6 +17,20 @@ public class Car implements Serializable,Comparable<Car> {
 		super();
 		this.carNumber = carNumber;
 		this.carName = carName;
+	}
+	
+	
+	public MusicSystem getMs() {
+		return ms;
+	}
+	public void setMs(MusicSystem ms) {
+		this.ms = ms;
+	}
+	public Engine getE() {
+		return e;
+	}
+	public void setE(Engine e) {
+		this.e = e;
 	}
 	public int getCarNumber() {
 		return carNumber;
@@ -63,7 +79,12 @@ public class Car implements Serializable,Comparable<Car> {
 	}
 	@Override
 	public String toString() {
-		return "Car [carNumber=" + carNumber + ", carName=" + carName + "]";
+		if(e == null)
+		{
+			return carName+"- Engine Not Yet Set  - "+carNumber+" - "+ms;
+		}
+		return carName+" - "+e.getEngineName()+" - "+carNumber+" - "+ms;
 	}
+	
 	
 }

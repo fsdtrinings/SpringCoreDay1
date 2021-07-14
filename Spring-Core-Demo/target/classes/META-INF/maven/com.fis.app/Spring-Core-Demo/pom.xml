@@ -36,6 +36,13 @@
 		</dependency>
 
 
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.12</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>cglib</groupId>
@@ -132,7 +139,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.25</version>   <!-- switch to  8.0.16 -->
+			<version>8.0.25</version>   <!-- switch to 8.0.16 -->
 		</dependency>
 
 

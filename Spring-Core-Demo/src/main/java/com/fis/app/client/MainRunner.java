@@ -11,8 +11,13 @@ public class MainRunner {
 		
 		// Spring container 
 		ApplicationContext spring = new ClassPathXmlApplicationContext("spring-conf.xml");
-		Car car = (Car)spring.getBean("carNewCar2");
+		Car car = (Car)spring.getBean("carNewCar");
 		System.out.println(car);
+		
+		Car car2 = (Car)spring.getBean("carNewCar2");
+		System.out.println(car2);
+		
+		
 		
 	}
 }
