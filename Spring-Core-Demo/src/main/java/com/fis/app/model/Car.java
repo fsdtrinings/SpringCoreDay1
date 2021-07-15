@@ -10,8 +10,9 @@ public class Car implements Serializable,Comparable<Car> {
 	private MusicSystem ms;
 	
 	public Car() {
+		
 		super();
-		// TODO Auto-generated constructor stub
+		System.out.println(" Constructor called");
 	}
 	public Car(int carNumber, String carName) {
 		super();
@@ -86,5 +87,38 @@ public class Car implements Serializable,Comparable<Car> {
 		return carName+" - "+e.getEngineName()+" - "+carNumber+" - "+ms;
 	}
 	
+	// -----------  Spring life cycle methods -------
 	
-}
+	public void doInIt()
+	{
+		System.out.println(" do init called ");
+	}
+	
+	public void doDestroy()
+	{
+		System.out.println(" do destroy  called ");
+	}
+	
+	
+}//end class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

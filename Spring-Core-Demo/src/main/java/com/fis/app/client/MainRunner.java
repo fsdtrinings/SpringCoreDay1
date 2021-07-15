@@ -10,14 +10,22 @@ public class MainRunner {
 	public static void main(String[] args) {
 		
 		// Spring container 
-		ApplicationContext spring = new ClassPathXmlApplicationContext("spring-conf.xml");
-		Car car = (Car)spring.getBean("carNewCar");
+		ClassPathXmlApplicationContext spring = new ClassPathXmlApplicationContext("spring-conf.xml");
+		/*Car car = (Car)spring.getBean("carNewCar");
 		System.out.println(car);
+		/*/
+		
 		
 		Car car2 = (Car)spring.getBean("carNewCar2");
-		System.out.println(car2);
+		car2.setCarName("Wagon-R");
+		System.out.println("First Call :- "+car2);
 		
 		
+		Car car3 = (Car)spring.getBean("carNewCar2");
+		System.out.println(" Second Call "+car3);
+		
+		
+		spring.close();
 		
 	}
 }
